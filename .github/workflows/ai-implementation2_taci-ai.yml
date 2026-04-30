@@ -35,8 +35,11 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: python-app
-          path: ai-service/
-          # This will upload the contents of ai-service, not the folder itself.
+          path: |
+            ai-service/
+            !ai-service/venv/
+            !ai-service/antenv/
+            !ai-service/.env
 
   deploy:
     runs-on: ubuntu-latest
