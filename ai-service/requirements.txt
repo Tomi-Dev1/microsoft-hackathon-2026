@@ -1,5 +1,6 @@
 fastapi
 uvicorn[standard]
+gunicorn
 python-dotenv
 openai>=1.0.0
 semantic-kernel>=1.0.0
